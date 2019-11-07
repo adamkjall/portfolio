@@ -2,4 +2,8 @@
   .menu {
     width: 20vw;
   }
+
+  .nav-background {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
