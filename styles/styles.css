@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "LEAFY";
+  font-style: normal;
+  font-weight: normal;
+  src: local("LEAFY"), url("leafy.woff") format("woff");
+}
+
+:root {
+  --menu-hover-color: #027596;
+  --menu-links-color: rgb(226, 224, 224);
+
+  --gallery-background-color: #b6faff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "LEAFY";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  display: grid;
+  justify-items: center;
+  font-family: monospace, sans-serif;
+  color: white;
+  background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #000a38,
+    #1cb5e0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    -45deg,
+    #000a38,
+    #1cb5e0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+nav {
+  /* display: flex; */
+}
+
+nav > .hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  outline: none;
+  /* padding: 1rem .8rem; */
+}
+
+
+.menu {
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  background: black;
+  margin-top: 0;
+  padding: 5rem 0;
+  transition: margin 0.8s ease;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-hide {
+  margin-right: -100vw;
+}
+
+.menu li {
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.menu .accordion {
+  list-style: none;
+  padding-left: 1rem;
+  display: none;
+}
+
+.menu .accordion.show {
+  display: block;
+  animation: slide-down 0.7s ease-out;
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    margin-top: -100%;
+    /* transform: translateY(-100%); */
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+    /* transform: translatY(0%) */
+  }
+}
+
+.menu .projects.open {
+  color: #1cb5e0;
+}
+
+.menu .projects.open + .accordion {
+  display: block;
+}
+
+.menu .projects i.fa-chevron-down {
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.menu .projects.open i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+
+  display: grid;
+  place-items: center center;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
+
+.hero-content {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.hero-content .learn-more {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-content .learn-more a {
+  text-decoration: none;
+  color: var(--menu-links-color);
+}
+
+main {
+  max-width: 50rem;
+  margin: 0 0rem;
+}
+
+main h2,
+h3,
+h4 {
+  text-align: center;
+}
+
+.overview {
+  padding: 0 1rem;
+}
+.overview h2 {
+  font-size: 2rem;
+}
+
+.gallery-item {
+  margin: 0;
+}
+.gallery-item img {
+  width: 100%;
+}
+.gallery-item h3,
+h4 {
+  font-size: 2rem;
+}
+
+.gallery-content {
+  padding: 0 1rem;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tools img {
+  width: 2.5rem;
+  height: 2.8rem;
+}
+
+.tools li {
+  text-align: center;
+}
+
+#booktropolis {
+  background: linear-gradient(to right, #83a5d4, #b6faff);
+  color: rgb(22, 22, 22);
+}
+
+#movie-manager {
+  background-color: #0b1413;
+  color: #dcd6ce;
+}
+
+/* Underline effect */
+.underline-effect {
+  position: relative;
+}
+
+.underline-effect::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: white;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.underline-effect:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
