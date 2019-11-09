@@ -11,7 +11,7 @@
 
 :root {
   --menu-hover-color: #027596;
-  --menu-links-color: rgb(226, 224, 224);
+  --menu-links-color: white;
 
   --gallery-background-color: #b6faff;
 }
@@ -47,12 +47,14 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+/*** MENU ***/
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   height: 3.3rem;
   z-index: 2;
+  transition: background-color .5s ease
 }
 
 nav > .hamburger {
@@ -81,7 +83,7 @@ nav > .hamburger {
   background: black;
   margin-top: 0;
   padding: 5rem 0;
-  transition: margin 0.8s ease;
+  transition: margin 0.8s ease-in-out;
 }
 
 .menu a {
@@ -94,34 +96,48 @@ nav > .hamburger {
 }
 
 .menu li {
-  margin: 1rem 0;
+  padding: 1rem;
   cursor: pointer;
 }
 
+.menu .menu-link-container {
+  /* width: 100%; */
+}
+
+.menu .menu-link-container > li {
+}
+
+/*** PROJECTS ACCORDION ***/
 .menu .accordion {
   list-style: none;
   padding-left: 1rem;
-  display: none;
+  margin-top: -100%;
+  margin-left: 100%;
+  opacity: 0;
+  transition: margin-top 1s ease;
 }
 
 .menu .accordion.show {
   display: block;
-  animation: slide-down 0.7s ease;
+  opacity: 1;
+  margin-top: 0;
+  margin-left: 0;
+  animation: slide-down 1s ease;
 }
 
 @keyframes slide-down {
   0% {
     opacity: 0;
     margin-top: -100%;
-    /* transform: translateY(-100%); */
   }
   65% {
     opacity: 0;
+    transform: rotateY(-90deg)
   }
   100% {
-    margin-top: 0;
     opacity: 1;
-    /* transform: translatY(0%) */
+    margin-top: 0;
+    transform: rotateY(0deg)
   }
 }
 
@@ -149,6 +165,7 @@ nav > .hamburger {
   transform: rotate(180deg);
 }
 
+/*** HERO ***/
 .hero {
   position: relative;
   height: 100vh;
@@ -206,9 +223,9 @@ nav > .hamburger {
   margin: .5rem 0;
 }
 
+/*** MAIN ***/
 main {
-  max-width: 50rem;
-  margin: 0 0rem;
+  max-width: 45rem;
 }
 
 main h2,
@@ -217,15 +234,21 @@ h4 {
   text-align: center;
 }
 
-.overview {
+/*** ABOUT ***/
+.about {
   padding: 0 1rem;
+  text-align: center;
 }
-.overview h2 {
+.about h2 {
   font-size: 2rem;
 }
 
-.gallery-item {
-  margin: 0;
+/*** GALLERY **/
+.gallery {
+ padding: 0 1rem;
+}
+.gallery-item ~ .gallery-item {
+  margin: 3rem 0;
 }
 .gallery-item img {
   width: 100%;
@@ -242,15 +265,17 @@ h4 {
 .tools {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  place-items: center center;
+  /* place-items: center center; */
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: .7rem;
+  font-weight: bold;
 }
 
 .tools img {
-  width: 2.5rem;
-  height: 2.8rem;
+  width: 2rem;
+  height: 2.2rem;
 }
 
 .tools li {
@@ -264,7 +289,15 @@ h4 {
 
 #movie-manager {
   background-color: #0b1413;
-  color: #dcd6ce;
+  color: #f3f3f3;
+}
+
+/*** FOOTER ***/
+footer {
+  height: 50vh;
+  width: 100%;
+  opacity: .3;
+  background-color: black;
 }
 
 /* Underline effect */

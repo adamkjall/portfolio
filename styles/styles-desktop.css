@@ -1,9 +1,18 @@
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .menu {
-    width: 20vw;
+    width: 20rem;
   }
 
   .nav-background {
     background-color: rgba(0, 0, 0, 0);
+  }
+
+  .gallery-item {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .tools {
+    grid-template-columns: repeat(auto-fit, minmax(4.5rem,1fr));
   }
 }
