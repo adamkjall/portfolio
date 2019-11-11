@@ -37,7 +37,7 @@ function toggleAccordion() {
 
 function showNavOnScroll() {
   window.onscroll = () => {
-    if (window.pageYOffset > window.innerHeight) {
+    if (window.pageYOffset > window.innerHeight - 5) {
       navElement.classList.add("nav-background")
     }
     else {
