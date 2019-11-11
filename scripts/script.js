@@ -1,16 +1,28 @@
+const navElement = document.querySelector("nav");
 const hamburgerElement = document.querySelector("nav .hamburger");
 const menuElement = document.querySelector("nav .menu");
-const projectsElement = document.querySelector(".menu .projects");
+
 const accordionElement = document.querySelector(".menu .accordion");
 const linkElements = document.querySelectorAll(".menu li a");
-const navElement = document.querySelector("nav");
+const projectsElement = document.querySelector(".menu .projects");
 
-hamburgerElement.addEventListener("click", toggleMenu);
-projectsElement.addEventListener("click", toggleAccordion);
+const bandElements = document.querySelectorAll(".band");
 
-linkElements.forEach(el => {
-  el.addEventListener("click", toggleMenu)
-})
+function initListeners() {
+  hamburgerElement.addEventListener("click", toggleMenu);
+  projectsElement.addEventListener("click", toggleAccordion);
+  
+  linkElements.forEach(el => {
+    el.addEventListener("click", toggleMenu)
+  })
+  
+  
+  bandElements.forEach(el =>
+    el.addEventListener("click", e => {
+      el.classList.toggle("hide-animation");
+    })
+  );
+}
 
 
 function toggleMenu() {
@@ -34,6 +46,8 @@ function showNavOnScroll() {
   }
 }
 
+
+initListeners();
 showNavOnScroll();
 
 

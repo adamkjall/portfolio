@@ -54,7 +54,7 @@ nav {
   width: 100%;
   height: 3.3rem;
   z-index: 2;
-  transition: background-color .5s ease
+  visibility: hidden;
 }
 
 nav > .hamburger {
@@ -66,7 +66,20 @@ nav > .hamburger {
 }
 
 .nav-background {
-  background-color: rgba(0, 0, 0, .4);
+  /* background-color: rgba(0, 0, 0, .4); */
+  visibility: visible;
+  animation: menu-color-animation 1s forwards;
+}
+
+@keyframes menu-color-animation {
+  0% {
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, .4);
+    transform: translateY(0%);
+  }
 }
 
 .menu {
@@ -98,13 +111,6 @@ nav > .hamburger {
 .menu li {
   padding: 1rem;
   cursor: pointer;
-}
-
-.menu .menu-link-container {
-  /* width: 100%; */
-}
-
-.menu .menu-link-container > li {
 }
 
 /*** PROJECTS ACCORDION ***/
@@ -225,7 +231,7 @@ nav > .hamburger {
 
 /*** MAIN ***/
 main {
-  max-width: 45rem;
+  max-width: 80rem;
 }
 
 main h2,
@@ -247,19 +253,56 @@ h4 {
 .gallery {
  padding: 0 1rem;
 }
-.gallery-item ~ .gallery-item {
-  margin: 3rem 0;
-}
-.gallery-item img {
-  width: 100%;
-}
-.gallery-item h3,
-h4 {
-  font-size: 2rem;
+
+.gallery > h2 {
+  margin: 3rem 0 1rem;
 }
 
-.gallery-content {
-  padding: 0 1rem;
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+}
+.box {
+  overflow-x: hidden;
+  filter: brightness(90%);
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.02);
+  filter: brightness(110%);
+}
+
+.band {
+  display: flex;
+  width: 200%;
+  transition: transform 1s ease-in-out;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.item > img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: fill;
+}
+
+.item {
+  width: 100%;
+  position: relative;
+}
+.item-1 {
+  width: 100%;
+  transition: transform 1s ease-in-out;
+  transform-origin: right center;
+}
+
+.band.hide-animation {
+  transform: translateX(-50%);
+}
+
+.band.hide-animation .item-1 {
+  transform: scale(0.3) rotateY(-90deg);
 }
 
 .tools {
