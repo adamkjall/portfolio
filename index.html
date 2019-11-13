@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Adam Kjäll - Portfolio</title>
+    <title>Adam Kjäll's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/hamburgers.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/styles-desktop.css" />
@@ -28,7 +29,7 @@
         ></a>
       </div>
       <button class="hamburger hamburger--collapse" type="button">
-        <span class="hamburger-box">
+        <span class="hamburger-gallery-item">
           <span class="hamburger-inner"></span>
         </span>
       </button>
@@ -108,49 +109,192 @@
         <h2>Projects</h2>
 
         <div class="grid">
-          <div id="webshop" class="box">
+          <div id="webshop" class="gallery-item">
             <div class="band">
               <div class="item item-1">
-                <img src="./images/projects/webshop-1.png" alt="" />
+                <picture>
+                  <source
+                    media="(min-width: 500px"
+                    )
+                    srcset="./images/projects/webshop-1.png"
+                  />
+                  <img src="./images/projects/webshop-mobile.jpg" alt="" />
+                </picture>
               </div>
               <div class="item item-2">
-                <!-- <img src="./images/projects/webshop-2.png" alt="" /> -->
                 <div class="project-info">
-                  <h2>Hello</h2>
+                  <header>
+                    <h2>CRWN Clothing</h2>
+                    <div>
+                      <a target="_blank" href=""
+                        ><i class="fab fa-github"></i
+                      ></a>
+                      <a target="_blank" href=""
+                        ><i class="fas fa-globe"></i
+                      ></a>
+                    </div>
+                  </header>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Harum aspernatur, modi, corporis culpa dolorem nisi
-                    provident veniam maiores, a autem doloremque tempore
-                    consequuntur sunt? Odio quis pariatur aut soluta cupiditate?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                    quis et! Repudiandae fuga officia praesentium facere qui.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                    quis et!
                   </p>
                 </div>
+                <h3 class="tools-header ">Built with:</h3>
+                <ul class="tools">
+                  <li>
+                    <img src="./images/icons/html5-2.png" alt="html5" />
+                    <p>HTML5</p>
+                  </li>
+                  <li>
+                    <img src="./images/icons/css3.png" alt="css3" />
+                    <p>CSS3</p>
+                  </li>
+                  <li>
+                    <img src="./images/icons/js.png" alt="javascript" />
+                    <p>JavaScript</p>
+                  </li>
+                  <li>
+                    <img src="./images/icons/react.png" alt="react" />
+                    <p>React</p>
+                  </li>
+                  <li>
+                    <img src="./images/icons/redux.png" alt="redux" />
+                    <p>Redux</p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <div id="booktropolis" class="box">
-            <div class="band">
-              <div class="item item-1">
-                <img src="./images/projects/booktropolis-1.png" alt="" />
+          <div class="grid">
+              <div id="booktropolis" class="gallery-item">
+                <div class="band">
+                  <div class="item item-1">
+                    <picture>
+                      <source
+                        media="(min-width: 500px"
+                        )
+                        srcset="./images/projects/booktropolis-1.png"
+                      />
+                      <img src="./images/projects/booktropolis-mobile.jpg" alt="" />
+                    </picture>
+                  </div>
+                  <div class="item item-2">
+                    <div class="project-info">
+                      <header>
+                        <h2>Booktropolis</h2>
+                        <div>
+                          <a target="_blank" href=""
+                            ><i class="fab fa-github"></i
+                          ></a>
+                          <a target="_blank" href=""
+                            ><i class="fas fa-globe"></i
+                          ></a>
+                        </div>
+                      </header>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                        quis et! Repudiandae fuga officia praesentium facere qui.
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                        quis et!
+                      </p>
+                    </div>
+                    <h3 class="tools-header ">Built with:</h3>
+                    <ul class="tools">
+                      <li>
+                        <img src="./images/icons/html5-2.png" alt="html5" />
+                        <p>HTML5</p>
+                      </li>
+                      <li>
+                        <img src="./images/icons/css3.png" alt="css3" />
+                        <p>CSS3</p>
+                      </li>
+                      <li>
+                        <img src="./images/icons/js.png" alt="javascript" />
+                        <p>JavaScript</p>
+                      </li>
+                      <li>
+                        <img src="./images/icons/react.png" alt="react" />
+                        <p>React</p>
+                      </li>
+                      <li>
+                        <img src="./images/icons/redux.png" alt="redux" />
+                        <p>Redux</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="item item-2">
-                <img src="./images/projects/booktropolis-2.png" alt="" />
-              </div>
-            </div>
-          </div>
 
-          <div id="dogbasics" class="box">
-            <div class="band">
-              <div class="item item-1">
-                <img src="./images/projects/dogbasics-1.png" alt="" />
-              </div>
-              <div class="item item-2">
-                <img src="./images/projects/dogbasics-2.png" alt="" />
-              </div>
-            </div>
-          </div>
+              <div class="grid">
+                  <div id="dogbasics" class="gallery-item">
+                    <div class="band">
+                      <div class="item item-1">
+                        <picture>
+                          <source
+                            media="(min-width: 500px"
+                            )
+                            srcset="./images/projects/dogbasics-1.png"
+                          />
+                          <img src="./images/projects/dogbasics-mobile.jpg" alt="" />
+                        </picture>
+                      </div>
+                      <div class="item item-2">
+                        <div class="project-info">
+                          <header>
+                            <h2>DogBasics</h2>
+                            <div>
+                              <a target="_blank" href=""
+                                ><i class="fab fa-github"></i
+                              ></a>
+                              <a target="_blank" href=""
+                                ><i class="fas fa-globe"></i
+                              ></a>
+                            </div>
+                          </header>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                            quis et! Repudiandae fuga officia praesentium facere qui.
+                          </p>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                            quis et!
+                          </p>
+                        </div>
+                        <h3 class="tools-header ">Built with:</h3>
+                        <ul class="tools">
+                          <li>
+                            <img src="./images/icons/html5-2.png" alt="html5" />
+                            <p>HTML5</p>
+                          </li>
+                          <li>
+                            <img src="./images/icons/css3.png" alt="css3" />
+                            <p>CSS3</p>
+                          </li>
+                          <li>
+                            <img src="./images/icons/js.png" alt="javascript" />
+                            <p>JavaScript</p>
+                          </li>
+                          <li>
+                            <img src="./images/icons/react.png" alt="react" />
+                            <p>React</p>
+                          </li>
+                          <li>
+                            <img src="./images/icons/redux.png" alt="redux" />
+                            <p>Redux</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
 
-          <div id="havsörnen" class="box">
+          <div id="havsörnen" class="gallery-item">
             <div class="band">
               <div class="item item-1">
                 <img src="./images/projects/text-game-1.png" alt="" />
@@ -161,7 +305,7 @@
             </div>
           </div>
 
-          <div id="simple-park" class="box">
+          <div id="simple-park" class="gallery-item">
             <div class="band">
               <div class="item item-1">
                 <img src="./images/projects/simple-park-1.jpg" alt="" />
@@ -172,7 +316,7 @@
             </div>
           </div>
 
-          <div id="movie-manager" class="box">
+          <div id="movie-manager" class="gallery-item">
             <div class="band">
               <div class="item item-1">
                 <img src="./images/projects/movie-manager-1.jpg" alt="" />
@@ -183,7 +327,7 @@
             </div>
           </div>
 
-          <div id="bait-boat" class="box">
+          <div id="bait-boat" class="gallery-item">
             <div class="band">
               <div class="item item-1">
                 <img src="./images/projects/baitboat-1.jpg" alt="" />
@@ -194,7 +338,7 @@
             </div>
           </div>
 
-          <div id="memory" class="box">
+          <div id="memory" class="gallery-item">
             <div class="band">
               <div class="item item-1">
                 <img src="./images/projects/memory-1.png" alt="" />
@@ -205,7 +349,7 @@
             </div>
           </div>
 
-          <div id="tic-tac-toe" class="box">
+          <div id="tic-tac-toe" class="gallery-item">
             <div class="band">
               <div class="item item-1">
                 <img src="./images/projects/tic-tac-toe-1.png" alt="" />

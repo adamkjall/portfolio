@@ -16,11 +16,14 @@
   --gallery-background-color: #b6faff;
 }
 
-h1,
+h1 {
+  font-family: "LEAFY";
+}
+
 h2,
 h3,
 h4 {
-  font-family: "LEAFY";
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 html {
@@ -32,7 +35,7 @@ body {
   overflow-x: hidden;
   display: grid;
   justify-items: center;
-  font-family: monospace, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   background: #000046; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -59,8 +62,8 @@ nav {
 
 nav > .hamburger {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 0.5rem;
+  right: 2.5rem;
   z-index: 2;
   cursor: pointer;
   outline: none;
@@ -113,7 +116,7 @@ nav .links a {
 }
 
 .menu li {
-  padding: .5rem;
+  padding: 0.7rem;
   cursor: pointer;
 }
 
@@ -127,7 +130,11 @@ nav .links a {
   /* opacity: 0; */
   /* transition: margin-top 1s ease; */
   max-height: 0;
-  transition: max-height .75s ease-in-out;
+  transition: max-height 0.75s ease-in-out;
+}
+
+.menu .accordion li:first-child {
+  margin-top: 0.5rem;
 }
 
 .menu .accordion.show {
@@ -136,7 +143,7 @@ nav .links a {
   /* margin-top: 0;
   margin-left: 0; */
   max-height: 400px;
-  transition: max-height 1s ease-in;
+  transition: max-height 1s ease-out;
   /* animation: slide-down 1s ease; */
 }
 
@@ -273,31 +280,29 @@ h4 {
 .grid {
   display: grid;
   grid-gap: 2rem;
+  /* display: flex;
+  flex-direction: column; */
 }
 
-.box {
+.gallery-item {
   overflow: hidden;
-  filter: brightness(80%);
-  transition: all 0.3s cubic-bezier(0.25, 0.4, 0.67, 1.9);
-}
-
-.box:hover {
-  transform: scale(1.02);
-  filter: brightness(110%);
-  filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, .4));
+  height: 28rem;
 }
 
 .band {
   display: flex;
+  height: 100%;
   width: 200%;
   transition: transform 1s ease-in-out;
   perspective: 1000px;
   cursor: pointer;
 }
 
-.item > img {
+.item img {
+  height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .item {
@@ -305,7 +310,6 @@ h4 {
   position: relative;
 }
 .item-1 {
-  width: 100%;
   transition: transform 1s ease-in-out;
   transform-origin: right center;
 }
@@ -318,41 +322,63 @@ h4 {
   transform: scale(0.3) rotateY(-90deg);
 }
 
-.project-info {
-  height: 100%;
+.item-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
   color: black;
 }
 
+.item-2 i {
+  font-size: 1.8rem;
+  color: black;
+}
+
+.project-info {
+  padding: 1rem;
+}
+
+.project-info header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-info header h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
 .tools {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* place-items: center center; */
+  grid-template-columns: repeat(5, 1fr);
   list-style: none;
-  padding: 0;
+  padding: 0 1rem;
   margin: 0;
   font-size: 0.7rem;
   font-weight: bold;
 }
 
 .tools img {
-  width: 2rem;
-  height: 2.2rem;
+  width: 1.8rem;
+  height: 2rem;
 }
 
 .tools li {
   text-align: center;
 }
 
-/* #booktropolis {
-  background: linear-gradient(to right, #83a5d4, #b6faff);
+#booktropolis .item-2 {
+  background: linear-gradient(#b6faff, #83a5d4);
   color: rgb(22, 22, 22);
 }
 
 #movie-manager {
   background-color: #0b1413;
   color: #f3f3f3;
-} */
+}
 
 /*** FOOTER ***/
 footer {

@@ -2,11 +2,18 @@
   .menu {
     width: 25rem;
   }
-
-  .gallery-item {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
+  
+  .box {
+    filter: brightness(80%);
+    transition: all 0.3s cubic-bezier(0.25, 0.4, 0.67, 1.9);
   }
+
+  .box:hover {
+    transform: scale(1.02);
+    filter: brightness(110%);
+    filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, .4));
+  }
+  
 
   .tools {
     grid-template-columns: repeat(auto-fit, minmax(4.5rem,1fr));
