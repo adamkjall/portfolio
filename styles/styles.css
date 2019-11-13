@@ -289,7 +289,7 @@ h4 {
   height: 28rem;
 }
 
-.band {
+.gallery-item .band {
   display: flex;
   height: 100%;
   width: 200%;
@@ -298,31 +298,32 @@ h4 {
   cursor: pointer;
 }
 
-.item img {
+.gallery-item .item img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: top center;
 }
 
-.item {
+.gallery-item .item {
   width: 100%;
   position: relative;
 }
-.item-1 {
+
+.gallery-item .item-1 {
   transition: transform 1s ease-in-out;
   transform-origin: right center;
 }
 
-.band.hide-animation {
+.gallery-item .band.hide-animation {
   transform: translateX(-50%);
 }
 
-.band.hide-animation .item-1 {
+.gallery-item .band.hide-animation .item-1 {
   transform: scale(0.3) rotateY(-90deg);
 }
 
-.item-2 {
+.gallery-item .item-2 {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -331,27 +332,28 @@ h4 {
   color: black;
 }
 
-.item-2 i {
+.gallery-item .item-2 i {
   font-size: 1.8rem;
   color: black;
+  margin: 0 .3rem
 }
 
-.project-info {
+.gallery-item .project-info {
   padding: 1rem;
 }
 
-.project-info header {
+.gallery-item .project-info header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.project-info header h2 {
+.gallery-item .project-info header h2 {
   font-size: 2rem;
   margin: 1rem 0;
 }
 
-.tools {
+.gallery-item .tools {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   list-style: none;
@@ -361,21 +363,22 @@ h4 {
   font-weight: bold;
 }
 
-.tools img {
+.gallery-item .tools img {
   width: 1.8rem;
   height: 2rem;
 }
 
-.tools li {
+.gallery-item .tools li {
   text-align: center;
 }
 
+/*** Custom colors for gallery items ***/
 #booktropolis .item-2 {
   background: linear-gradient(#b6faff, #83a5d4);
   color: rgb(22, 22, 22);
 }
 
-#movie-manager {
+#movie-manager .item-2 {
   background-color: #0b1413;
   color: #f3f3f3;
 }
