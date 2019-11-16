@@ -2,16 +2,37 @@
   .menu {
     width: 25rem;
   }
-  
-  .box {
-    filter: brightness(80%);
-    transition: all 0.3s cubic-bezier(0.25, 0.4, 0.67, 1.9);
+
+  .about {
+    display: flex;
   }
 
-  .box:hover {
+  .about h2 {
+    text-align: left;
+  }
+
+  .about .container {
+    width: 50%;
+    padding-right: 2.5rem;
+    text-align: left;
+  }
+
+  .about .skills {
+    width: 50%;
+    margin-top: 0;
+    padding-left: 2.5rem;
+  }
+  
+  .gallery-item {
+    filter: brightness(80%);
+    transition: all 0.3s cubic-bezier(0.25, 0.4, 0.67, 1.9);
+    filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, .4));
+    margin-bottom: 3rem;
+  }
+
+  .gallery-item:hover {
     transform: scale(1.02);
     filter: brightness(110%);
-    filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, .4));
   }
   
 

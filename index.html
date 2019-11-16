@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Adam Kjäll's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/hamburgers.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/styles-desktop.css" />
 
-    <script
-      src="https://kit.fontawesome.com/0337e78d8a.js"
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
       crossorigin="anonymous"
-    ></script>
+    />
+
     <script defer src="./scripts/script.js"></script>
   </head>
   <body>
     <nav>
       <div class="links">
-        <a target="_blank" href="https://github.com/adamkjall"
-          ><i class="fab fa-github"></i
-        ></a>
         <a
           target="_blank"
           href="https://www.linkedin.com/in/adam-kjäll-70600b176"
-          ><i class="fab fa-linkedin"></i
-        ></a>
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a target="_blank" href="https://github.com/adamkjall">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
       <button class="hamburger hamburger--collapse" type="button">
         <span class="hamburger-gallery-item">
@@ -95,15 +102,29 @@
 
     <main id="content">
       <article class="about">
-        <h2>About</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          odit. Obcaecati voluptates odit at itaque sit! Itaque aut, iste
-          dolores impedit, iure obcaecati soluta officia, minima placeat odio
-          earum aliquam? Obcaecati voluptates odit at itaque sit! Itaque aut,
-          iste dolores impedit, iure obcaecati soluta officia, minima placeat
-          odio earum aliquam?
-        </p>
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            odit. Obcaecati voluptates odit at itaque sit! Itaque aut, iste
+            dolores impedit, iure obcaecati soluta officia, minima placeat odio
+            earum aliquam? Obcaecati voluptates odit at itaque sit! Itaque aut,
+            iste dolores impedit, iure obcaecati soluta officia, minima placeat
+            odio earum aliquam?
+          </p>
+        </div>
+        <div class="skills">
+          <h2>Skills</h2>
+          <div>
+            Frameworks: &nbsp; React - Redux - Git
+          </div>
+          <div>
+            Languages: &nbsp; Javascript - Java
+          </div>
+          <div>
+            Web Design: &nbsp; HTML5 - CSS3 - Sass
+          </div>
+        </div>
       </article>
       <section class="gallery">
         <h2>Projects</h2>
@@ -125,13 +146,16 @@
                 <div class="project-info">
                   <header>
                     <h2>CRWN Clothing</h2>
-                    <div>
-                      <a target="_blank" href=""
-                        ><i class="fab fa-github"></i
+                    <div class="icons">
+                      <a
+                        target="_blank"
+                        href="https://github.com/adamkjall/e-store-app"
+                      >
+                        <i class="fab fa-github"></i
                       ></a>
+
                       <a target="_blank" href=""
-                        ><i class="fas fa-globe"></i
-                      ></a>
+                        ><i class="fas fa-globe"></i></a>
                     </div>
                   </header>
                   <p>
@@ -143,164 +167,247 @@
                     quis et!
                   </p>
                 </div>
-                <h3 class="tools-header ">Built with:</h3>
-                <ul class="tools">
-                  <li>
-                    <img src="./images/icons/html5-2.png" alt="html5" />
-                    <p>HTML5</p>
-                  </li>
-                  <li>
-                    <img src="./images/icons/css3.png" alt="css3" />
-                    <p>CSS3</p>
-                  </li>
-                  <li>
-                    <img src="./images/icons/js.png" alt="javascript" />
-                    <p>JavaScript</p>
-                  </li>
-                  <li>
-                    <img src="./images/icons/react.png" alt="react" />
-                    <p>React</p>
-                  </li>
-                  <li>
-                    <img src="./images/icons/redux.png" alt="redux" />
-                    <p>Redux</p>
-                  </li>
-                </ul>
+                <div class="tools-container">
+                  <h3 class="tools-header ">Built with:</h3>
+                  <ul class="tools">
+                    <li>
+                      <img src="./images/icons/icons8-html-5.svg" alt="html5" />
+                      <p>HTML5</p>
+                    </li>
+                    <li>
+                      <img src="./images/icons/icons8-sass.svg" alt="sass" />
+                      <p>Sass</p>
+                    </li>
+                    <li>
+                      <img
+                        src="./images/icons/icons8-javascript.svg"
+                        alt="javascript"
+                      />
+                      <p>JavaScript</p>
+                    </li>
+                    <li>
+                      <img
+                        src="./images/icons/icons8-react-native.svg"
+                        alt="react"
+                      />
+                      <p>React</p>
+                    </li>
+                    <li>
+                      <img src="./images/icons/redux.png" alt="redux" />
+                      <p>Redux</p>
+                    </li>
+                    <li>
+                      <img
+                        src="./images/icons/icons8-firebase.svg"
+                        alt="firebase"
+                      />
+                      <p>Firebase</p>
+                    </li>
+                    <li>
+                      <img
+                        src="./images/icons/icons8-graphql.svg"
+                        alt="firebase"
+                      />
+                      <p>GraphQL</p>
+                    </li>
+                    <li>
+                      <img
+                        src="./images/icons/icons8-stripe.svg"
+                        alt="firebase"
+                      />
+                      <p>Stripe</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="grid">
-              <div id="booktropolis" class="gallery-item">
-                <div class="band">
-                  <div class="item item-1">
-                    <picture>
-                      <source
-                        media="(min-width: 500px"
-                        )
-                        srcset="./images/projects/booktropolis-1.png"
-                      />
-                      <img src="./images/projects/booktropolis-mobile.jpg" alt="" />
-                    </picture>
-                  </div>
-                  <div class="item item-2">
-                    <div class="project-info">
-                      <header>
-                        <h2>Booktropolis</h2>
-                        <div>
-                          <a target="_blank" href=""
-                            ><i class="fab fa-github"></i
-                          ></a>
-                          <a target="_blank" href=""
-                            ><i class="fas fa-globe"></i
-                          ></a>
-                        </div>
-                      </header>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-                        quis et! Repudiandae fuga officia praesentium facere qui.
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-                        quis et!
-                      </p>
-                    </div>
-                    <h3 class="tools-header ">Built with:</h3>
-                    <ul class="tools">
-                      <li>
-                        <img src="./images/icons/html5-2.png" alt="html5" />
-                        <p>HTML5</p>
-                      </li>
-                      <li>
-                        <img src="./images/icons/css3.png" alt="css3" />
-                        <p>CSS3</p>
-                      </li>
-                      <li>
-                        <img src="./images/icons/js.png" alt="javascript" />
-                        <p>JavaScript</p>
-                      </li>
-                      <li>
-                        <img src="./images/icons/react.png" alt="react" />
-                        <p>React</p>
-                      </li>
-                      <li>
-                        <img src="./images/icons/redux.png" alt="redux" />
-                        <p>Redux</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid">
-                  <div id="dogbasics" class="gallery-item">
-                    <div class="band">
-                      <div class="item item-1">
-                        <picture>
-                          <source
-                            media="(min-width: 500px"
-                            )
-                            srcset="./images/projects/dogbasics-1.png"
-                          />
-                          <img src="./images/projects/dogbasics-mobile.jpg" alt="" />
-                        </picture>
-                      </div>
-                      <div class="item item-2">
-                        <div class="project-info">
-                          <header>
-                            <h2>DogBasics</h2>
-                            <div>
-                              <a target="_blank" href=""
-                                ><i class="fab fa-github"></i
-                              ></a>
-                              <a target="_blank" href=""
-                                ><i class="fas fa-globe"></i
-                              ></a>
-                            </div>
-                          </header>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-                            quis et! Repudiandae fuga officia praesentium facere qui.
-                          </p>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-                            quis et!
-                          </p>
-                        </div>
-                        <h3 class="tools-header ">Built with:</h3>
-                        <ul class="tools">
-                          <li>
-                            <img src="./images/icons/html5-2.png" alt="html5" />
-                            <p>HTML5</p>
-                          </li>
-                          <li>
-                            <img src="./images/icons/css3.png" alt="css3" />
-                            <p>CSS3</p>
-                          </li>
-                          <li>
-                            <img src="./images/icons/js.png" alt="javascript" />
-                            <p>JavaScript</p>
-                          </li>
-                          <li>
-                            <img src="./images/icons/react.png" alt="react" />
-                            <p>React</p>
-                          </li>
-                          <li>
-                            <img src="./images/icons/redux.png" alt="redux" />
-                            <p>Redux</p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-          <div id="havsörnen" class="gallery-item">
+          <div id="booktropolis" class="gallery-item">
             <div class="band">
               <div class="item item-1">
-                <img src="./images/projects/text-game-1.png" alt="" />
+                <picture>
+                  <source
+                    media="(min-width: 500px"
+                    )
+                    srcset="./images/projects/booktropolis-1.png"
+                  />
+                  <img src="./images/projects/booktropolis-mobile.jpg" alt="" />
+                </picture>
               </div>
               <div class="item item-2">
-                <img src="./images/projects/text-game-2.png" alt="" />
+                <div class="project-info">
+                  <header>
+                    <h2>Booktropolis</h2>
+                    <div class="icons">
+                      <a
+                        target="_blank"
+                        href="https://github.com/adamkjall/booktropolis"
+                      >
+                        <i class="fab fa-github"></i
+                      ></a>
+
+                      <a
+                        target="_blank"
+                        href="https://adamkjall.github.io/booktropolis/"
+                        ><i class="fas fa-globe"></i></a>
+                    </div>
+                  </header>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                    quis et! Repudiandae fuga officia praesentium facere qui.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                    quis et!
+                  </p>
+                </div>
+                <div class="tools-container">
+                  <h3 class="tools-header ">Built with:</h3>
+                  <ul class="tools">
+                    <li>
+                      <img src="./images/icons/icons8-html-5.svg" alt="html5" />
+                      <p>HTML5</p>
+                    </li>
+                    <li>
+                      <img src="./images/icons/icons8-css3.svg" alt="css3" />
+                      <p>CSS3</p>
+                    </li>
+                    <li>
+                      <img
+                        src="./images/icons/icons8-javascript.svg"
+                        alt="javascript"
+                      />
+                      <p>JavaScript</p>
+                    </li>
+                    <li>
+                      <img
+                        src="./images/icons/icons8-react-native.svg"
+                        alt="react"
+                      />
+                      <p>React</p>
+                    </li>
+                    <li>
+                      <img src="./images/icons/redux.png" alt="redux" />
+                      <p>Redux</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="dogbasics" class="gallery-item">
+            <div class="band">
+              <div class="item item-1">
+                <picture>
+                  <source
+                    media="(min-width: 500px"
+                    )
+                    srcset="./images/projects/dogbasics-1.png"
+                  />
+                  <img
+                    src="./images/projects/dogbasics-mobile.jpg"
+                    alt="project"
+                  />
+                </picture>
+              </div>
+              <div class="item item-2">
+                <div class="project-info">
+                  <header>
+                    <h2>DogBasics</h2>
+                    <div class="icons">
+                      <a
+                        target="_blank"
+                        href="https://github.com/adamkjall/dobasics"
+                      >
+                        <i class="fab fa-github"></i
+                      ></a>
+
+                      <a
+                        target="_blank"
+                        href="https://adamkjall.github.io/dogbasics-mobile/"
+                        ><i class="fas fa-globe"></i></a>
+                    </div>
+                  </header>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                    quis et! Repudiandae fuga officia praesentium facere qui.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                    quis et!
+                  </p>
+                </div>
+                <div class="tools-container">
+                  <h3 class="tools-header ">Built with:</h3>
+                  <ul class="tools">
+                    <li>
+                      <img src="./images/icons/icons8-html-5.svg" alt="html5" />
+                      <p>HTML5</p>
+                    </li>
+                    <li>
+                      <img src="./images/icons/icons8-css3.svg" alt="css3" />
+                      <p>CSS3</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="zombie-attack" class="gallery-item">
+            <div class="band">
+              <div class="item item-1">
+                <picture>
+                  <source
+                    media="(min-width: 500px"
+                    )
+                    srcset="./images/projects/text-game-1.png"
+                  />
+                  <img src="./images/projects/text-game-2.png" alt="project" />
+                </picture>
+              </div>
+              <div class="item item-2">
+                <div class="project-info">
+                  <header>
+                    <h2>Zombie-attack</h2>
+                    <div class="icons">
+                      <a
+                        target="_blank"
+                        href="https://github.com/adamkjall/text-based-adventure-game"
+                      >
+                        <i class="fab fa-github"></i
+                      ></a>
+
+                      <a
+                        target="_blank"
+                        href="https://adamkjall.github.io/text-based-adventure-game/"
+                        ><i class="fas fa-globe"></i></a>
+                    </div>
+                  </header>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                    quis et! Repudiandae fuga officia praesentium facere qui.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                    quis et!
+                  </p>
+                </div>
+                <div class="tools-container">
+                  <h3 class="tools-header ">Built with:</h3>
+                  <ul class="tools">
+                    <li>
+                      <img src="./images/icons/icons8-html-5.svg" alt="html5" />
+                      <p>HTML5</p>
+                    </li>
+                    <li>
+                      <img src="./images/icons/icons8-css3.svg" alt="css3" />
+                      <p>CSS3</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -363,6 +470,8 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <p>Icons by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+    </footer>
   </body>
 </html>

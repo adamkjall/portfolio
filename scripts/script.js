@@ -47,7 +47,7 @@ function toggleAccordion() {
 
 function showNavOnScroll() {
   window.onscroll = () => {
-    if (window.pageYOffset > window.innerHeight - 5) {
+    if (window.pageYOffset > 70) {
       navElement.classList.add("nav-background");
     } else {
       navElement.classList.remove("nav-background");
@@ -55,5 +55,7 @@ function showNavOnScroll() {
   };
 }
 
-initListeners();
-showNavOnScroll();
+window.addEventListener("load", () => {
+  initListeners();
+  showNavOnScroll();
+})

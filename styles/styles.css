@@ -76,13 +76,17 @@ nav .links {
 }
 
 nav .links i {
-  font-size: 2rem;
-  margin: 0 1rem;
+  font-size: 2.1rem;
+  margin-left: 1rem;
+  color: white;
+  /* filter: invert(1); */
 }
 
-nav .links a {
-  color: white;
+nav .links i:hover {
+  color: rgb(223, 71, 51);
 }
+
+
 
 .nav-background {
   background-color: rgba(0, 0, 0, 0.4);
@@ -100,7 +104,7 @@ nav .links a {
   flex-direction: column;
   align-items: center;
   list-style: none;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgb(0, 0, 0);
   margin-top: 0;
   padding: 5rem 0;
   transition: margin 0.8s ease-in-out;
@@ -133,9 +137,14 @@ nav .links a {
   transition: max-height 0.75s ease-in-out;
 }
 
+.menu .accordion li {
+  padding: .5rem;
+}
+
 .menu .accordion li:first-child {
   margin-top: 0.5rem;
 }
+
 
 .menu .accordion.show {
   display: block;
@@ -258,12 +267,27 @@ h4 {
 
 /*** ABOUT ***/
 .about {
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding: 0 1rem;
   text-align: center;
+  line-height: 1.4rem;
 }
 .about h2 {
-  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.skills {
+  color: white;
+  font-weight: bold;
+  margin-top: 3rem;
+  line-height: 2rem;
+}
+
+.skills div {
+  text-align: left;
+  border-bottom: 2px solid white;
+  margin: 0.5rem 0;
 }
 
 /*** GALLERY **/
@@ -273,8 +297,8 @@ h4 {
 }
 
 .gallery > h2 {
-  margin: 3rem 0 1rem;
-  font-size: 2.4rem;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
 }
 
 .grid {
@@ -286,7 +310,7 @@ h4 {
 
 .gallery-item {
   overflow: hidden;
-  height: 28rem;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.507));
 }
 
 .gallery-item .band {
@@ -298,11 +322,12 @@ h4 {
   cursor: pointer;
 }
 
-.gallery-item .item img {
+.gallery-item .item picture img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: top center;
+  border-radius: .3rem;
 }
 
 .gallery-item .item {
@@ -311,6 +336,7 @@ h4 {
 }
 
 .gallery-item .item-1 {
+  transform: translateZ(0);
   transition: transform 1s ease-in-out;
   transform-origin: right center;
 }
@@ -324,19 +350,19 @@ h4 {
 }
 
 .gallery-item .item-2 {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
   color: black;
+  border-radius: .3rem;
 }
-
+/* 
 .gallery-item .item-2 i {
   font-size: 1.8rem;
   color: black;
   margin: 0 .3rem
-}
+} */
 
 .gallery-item .project-info {
   padding: 1rem;
@@ -348,14 +374,35 @@ h4 {
   align-items: center;
 }
 
+.gallery-item .project-info header .icons i {
+  font-size: 1.5rem;
+  margin: 0 .2rem;
+  color: black;
+}
+
+.gallery-item .project-info header .icons img:hover {
+  filter: invert(.5) sepia(1) saturate(10) hue-rotate(160deg);
+}
+
 .gallery-item .project-info header h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 1rem 0;
 }
 
+.gallery-item .project-info header + p {
+  margin-top: 0;
+}
+
+.gallery-item .tools-container .tools-header {
+  margin-bottom: .8rem;
+}
+
 .gallery-item .tools {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(5, 1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   padding: 0 1rem;
   margin: 0;
@@ -365,7 +412,7 @@ h4 {
 
 .gallery-item .tools img {
   width: 1.8rem;
-  height: 2rem;
+  margin: 0 1rem;
 }
 
 .gallery-item .tools li {
@@ -374,21 +421,34 @@ h4 {
 
 /*** Custom colors for gallery items ***/
 #booktropolis .item-2 {
-  background: linear-gradient(#b6faff, #83a5d4);
+  background: linear-gradient(#B0F0FA, #85A7D5);
   color: rgb(22, 22, 22);
 }
 
 #movie-manager .item-2 {
-  background-color: #0b1413;
-  color: #f3f3f3;
+  background-color: rgb(24, 24, 24);
+  color: rgb(238, 237, 237);
+}
+
+#zombie-attack .item-2 {
+  background-color: rgb(7, 7, 7);
+  color: rgb(238, 237, 237);
+}
+
+#zombie-attack .item-2 header .icons i {
+  color: rgb(238, 237, 237);
+}
+
+#zombie-attack .item-2 header .icons i:hover {
+  color: rgb(223, 71, 51);
 }
 
 /*** FOOTER ***/
 footer {
   height: 50vh;
   width: 100%;
-  opacity: 0.3;
-  background-color: black;
+  /* opacity: 0.3; */
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Underline effect */
