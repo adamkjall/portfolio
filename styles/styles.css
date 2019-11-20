@@ -380,8 +380,8 @@ h4 {
   color: black;
 }
 
-.gallery-item .project-info header .icons img:hover {
-  filter: invert(.5) sepia(1) saturate(10) hue-rotate(160deg);
+.gallery-item .project-info header .icons i:hover {
+  color: rgb(223, 71, 51);
 }
 
 .gallery-item .project-info header h2 {

@@ -8,6 +8,9 @@ const projectsElement = document.querySelector(".menu .projects");
 
 const bandElements = document.querySelectorAll(".band");
 
+/**
+ * Initalize the event listeners
+ */
 function initListeners() {
   hamburgerElement.addEventListener("click", toggleMenu);
   projectsElement.addEventListener("click", toggleAccordion);
@@ -22,6 +25,7 @@ function initListeners() {
     })
   );
 
+  // Close menu if click is outside menu
   window.addEventListener("click", e => {
     if (navElement.contains(e.target)) {
       return;
@@ -30,21 +34,34 @@ function initListeners() {
   })
 }
 
+/**
+ * Toggle to menu to open or close
+ */
 function toggleMenu() {
   menuElement.classList.toggle("menu-hide");
   hamburgerElement.classList.toggle("is-active");
 }
 
+/**
+ * Close the menu
+ */
 function closeMenu() {
   menuElement.classList.add("menu-hide");
   hamburgerElement.classList.remove("is-active");
 }
 
+/**
+ * Toggle the accordion to open or close
+ */
 function toggleAccordion() {
   projectsElement.classList.toggle("open");
   accordionElement.classList.toggle("show");
 }
 
+/**
+ * Give the navigation a background when user is not
+ * at the top of the page
+ */
 function showNavOnScroll() {
   window.onscroll = () => {
     if (window.pageYOffset > 70) {
@@ -55,6 +72,9 @@ function showNavOnScroll() {
   };
 }
 
+/**
+ * Start the script when the load event fires
+ */
 window.addEventListener("load", () => {
   initListeners();
   showNavOnScroll();
