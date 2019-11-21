@@ -10,5 +10,5 @@ Features:
 * Clickable projects with animation
 * Gallery with my projects
 
-GitHub Pages: https://adamkjall.github.io/portfolio/
+GitHub Pages: https://adamkjall.github.io/portfolio/ <br>
 GitHub Repo: https://github.com/adamkjall/portfolio
