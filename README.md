@@ -9,3 +9,6 @@ Features:
 * Scroll into view on menu click
 * Clickable projects with animation
 * Gallery with my projects
+
+GitHub Pages: https://adamkjall.github.io/portfolio/
+GitHub Repo: https://github.com/adamkjall/portfolio
